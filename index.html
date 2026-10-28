@@ -3,77 +3,106 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AIEDU Consulting Ltd | Database, Data Analytics & AI Solutions</title>
+<title>AIEDU Consulting Ltd | Save YourSelf Time, Energy & Money</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:Inter,Segoe UI,sans-serif}
-body{background:#f8fafc;color:#0f172a}
-header{background:#fff;padding:18px 6%;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 20px rgba(0,0,0,.06);position:sticky;top:0;z-index:10}
-.logo{font-weight:800;font-size:22px;color:#0b5cff} .logo span{color:#0f172a}
+body{background:#f0f6ff;color:#0f172a}
+header{background:rgba(255,255,255,.9);backdrop-filter:blur(10px);padding:18px 6%;display:flex;justify-content:space-between;align-items:center;box-shadow:0 2px 20px rgba(11,92,255,.1);position:sticky;top:0;z-index:10;border-bottom:1px solid #dbeafe}
+.logo{font-weight:900;font-size:24px;color:#0b5cff} .logo span{color:#0f172a}
 nav a{margin-left:22px;text-decoration:none;color:#334155;font-weight:600}
-.btn{background:#0b5cff;color:#fff;padding:12px 22px;border-radius:999px;text-decoration:none;font-weight:700;display:inline-block}
-.hero{background:radial-gradient(1200px 600px at 80% -10%,#dbeafe,transparent),#fff;padding:70px 6%;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
-.hero h1{font-size:48px;line-height:1.1;font-weight:900} .hero h1 span{color:#0b5cff}
+.btn{background:linear-gradient(135deg,#0b5cff,#0047d6);color:#fff;padding:12px 26px;border-radius:999px;text-decoration:none;font-weight:700;display:inline-block;box-shadow:0 8px 20px rgba(11,92,255,.3)}
+.hero{background:radial-gradient(1000px 600px at 85% 0%,#60a5fa 0%,transparent 60%),radial-gradient(800px 500px at 10% 20%,#93c5fd 0%,transparent 50%),linear-gradient(180deg,#ffffff 0%,#eff6ff 100%);padding:80px 6%;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-50px;right:-50px;width:300px;height:300px;background:#0b5cff;opacity:.05;border-radius:50%}
+.hero h1{font-size:50px;line-height:1.1;font-weight:900} .hero h1 span{background:linear-gradient(135deg,#0b5cff,#00d4ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .hero p{margin:18px 0 26px;color:#475569;font-size:18px;line-height:1.6}
-.card{background:#fff;border-radius:20px;padding:22px;box-shadow:0 10px 40px rgba(2,12,60,.08)}
-.grid{padding:50px 6%;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.service{border:1px solid #e2e8f0;border-radius:18px;padding:24px;background:#fff}
-.service h3{margin:12px 0 8px} .service p{color:#64748b;line-height:1.6}
-.icon{width:48px;height:48px;background:#eff6ff;border-radius:12px;display:grid;place-items:center;color:#0b5cff;font-size:22px;font-weight:800}
-.cta{background:#0b5cff;color:#fff;margin:40px 6%;border-radius:24px;padding:50px;text-align:center}
-footer{background:#0f172a;color:#94a3b8;padding:40px 6%;text-align:center}
-@media(max-width:900px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr}header nav{display:none}.hero h1{font-size:36px}}
+.card{background:linear-gradient(135deg,#ffffff,#f8fbff);border-radius:24px;padding:26px;box-shadow:0 20px 60px rgba(11,92,255,.15);border:1px solid #dbeafe}
+.grid{padding:50px 6%;display:grid;grid-template-columns:repeat(3,1fr);gap:22px;background:linear-gradient(180deg,#f0f6ff 0%,#ffffff 100%)}
+.service{border:1px solid #dbeafe;border-radius:20px;padding:28px;background:#fff;box-shadow:0 10px 30px rgba(11,92,255,.06);transition:.3s}
+.service:hover{transform:translateY(-5px);box-shadow:0 20px 40px rgba(11,92,255,.15)}
+.service h3{margin:12px 0 8px;color:#0f172a} .service p{color:#64748b;line-height:1.6}
+.icon{width:52px;height:52px;background:linear-gradient(135deg,#eff6ff,#dbeafe);border-radius:14px;display:grid;place-items:center;color:#0b5cff;font-size:22px;font-weight:800;border:1px solid #bfdbfe}
+.cta{background:linear-gradient(135deg,#0b5cff 0%,#0047d6 50%,#002a80 100%);color:#fff;margin:50px 6%;border-radius:28px;padding:60px;text-align:center;position:relative;overflow:hidden}
+.cta::before{content:'';position:absolute;top:-100px;left:-100px;width:400px;height:400px;background:rgba(255,255,255,.08);border-radius:50%}
+footer{background:linear-gradient(180deg,#0f172a,#020617);color:#cbd5e1;padding:50px 6%}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:30px;text-align:left}
+.footer-grid a{color:#94a3b8;text-decoration:none;display:block;margin:8px 0}
+@media(max-width:900px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr}header nav{display:none}.hero h1{font-size:36px}.footer-grid{grid-template-columns:1fr}}
+.whatsapp-float{position:fixed;bottom:20px;right:20px;background:linear-gradient(135deg,#25D366,#128C7E);color:#fff;width:64px;height:64px;border-radius:50%;display:grid;place-items:center;font-size:30px;text-decoration:none;box-shadow:0 10px 25px rgba(37,211,102,.4);z-index:20}
+
 </style>
 </head>
 <body>
+<a class="whatsapp-float" href="https://wa.me/2349153151551" target="_blank">W</a>
 <header>
 <div class="logo">AIEDU<span> Consulting Ltd</span></div>
 <nav><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
-<a class="btn" href="#contact">Get Started</a>
+<a class="btn" href="https://wa.me/2349153151551">WhatsApp Us</a>
 </header>
 
 <section class="hero">
 <div>
-<h1>Database, <span>Data Analytics</span> & AI Solutions That Drive Growth</h1>
-<p>AIEDU Consulting Ltd helps businesses turn data into decisions. From database optimization to AI-powered analytics, we build scalable solutions for the future.</p>
-<div style="display:flex;gap:12px">
-<a class="btn" href="#contact">Book Consultation</a>
+<h1>Save YourSelf <span>Time, Energy & Money</span> System</h1>
+<p>AIEDU Consulting Ltd helps businesses turn data into decisions. From SOPs, AI, Training to eCommerce Solutions - Powered by SOPs | AI | Training | eCommerce.</p>
+<div style="display:flex;gap:12px;flex-wrap:wrap">
+<a class="btn" href="https://wa.me/2349153151551">Book Consultation</a>
 <a class="btn" style="background:#eef2ff;color:#0b5cff" href="#services">Our Services</a>
 </div>
-<div style="display:flex;gap:18px;margin-top:28px;color:#64748b;font-weight:600">
-<span>✓ 100+ Projects</span><span>✓ Expert Team</span><span>✓ 24/7 Support</span>
+<div style="display:flex;gap:18px;margin-top:28px;color:#64748b;font-weight:600;flex-wrap:wrap">
+<span>✓ 100+ Projects</span><span>✓ Expert Team</span><span>✓ SOP + AI System</span>
 </div>
 </div>
 <div class="card">
 <h3 style="margin-bottom:12px">AI Analytics Dashboard</h3>
 <div style="height:8px;background:#e2e8f0;border-radius:99px;margin:14px 0"><div style="width:78%;height:100%;background:#0b5cff;border-radius:99px"></div></div>
-<p style="color:#64748b">Revenue Growth +78%</p>
+<p style="color:#64748b">Business Growth +78%</p>
 <div style="margin-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:12px">
-<div style="background:#f8fafc;padding:14px;border-radius:12px"><b>Databases</b><br><span style="color:#64748b">Optimized</span></div>
+<div style="background:#f8fafc;padding:14px;border-radius:12px"><b>SOPs</b><br><span style="color:#64748b">Systemized</span></div>
 <div style="background:#f8fafc;padding:14px;border-radius:12px"><b>AI Models</b><br><span style="color:#64748b">Deployed</span></div>
 </div>
 </div>
 </section>
 
 <section id="services" class="grid">
-<div class="service"><div class="icon">DB</div><h3>Database Solutions</h3><p>Design, migration, optimization & management for MySQL, PostgreSQL, MongoDB, Oracle.</p></div>
-<div class="service"><div class="icon">DA</div><h3>Data Analytics</h3><p>Business Intelligence, dashboards, Power BI, Tableau, and predictive reporting.</p></div>
-<div class="service"><div class="icon">AI</div><h3>AI & Machine Learning</h3><p>Custom AI solutions, automation, NLP, and intelligent decision systems.</p></div>
+<div class="service"><div class="icon">DB</div><h3>Database Solutions</h3><p>Design, migration, optimization & management for MySQL, PostgreSQL, MongoDB.</p></div>
+<div class="service"><div class="icon">AI</div><h3>AI & Automation</h3><p>Custom AI solutions, SOP automation, NLP, and intelligent decision systems.</p></div>
+<div class="service"><div class="icon">TR</div><h3>Training & eCommerce</h3><p>LMS, AI Skills Training, Store setup, automation, scaling & payment integration.</p></div>
 </section>
 
 <section id="about" style="padding:20px 6% 10px">
 <div style="background:#fff;border-radius:20px;padding:30px;border:1px solid #e2e8f0">
 <h2 style="font-size:32px;margin-bottom:12px">About AIEDU Consulting Ltd</h2>
-<p style="color:#475569;line-height:1.7;font-size:17px">We are a leading consulting firm based in Lagos, Nigeria, specializing in Database Management, Data Analytics, and Artificial Intelligence. We partner with startups to enterprises to unlock the power of their data.</p>
+<p style="color:#475569;line-height:1.7;font-size:17px">We are a leading consulting firm with offices in Abuja & Ogun State, specializing in SOPs, AI, Training and eCommerce. We help businesses reduce waste and increase profit by building systems that Save YourSelf Time, Energy and Money.</p>
 </div>
 </section>
 
 <section id="contact" class="cta">
-<h2 style="font-size:36px;margin-bottom:10px">Ready to Transform Your Data?</h2>
+<h2 style="font-size:36px;margin-bottom:10px">Ready to Build Your System?</h2>
 <p style="margin-bottom:22px;opacity:.9">Let's discuss your project today.</p>
 <a class="btn" style="background:#fff;color:#0b5cff" href="mailto:info@aieduconsulting.com">info@aieduconsulting.com</a>
-<p style="margin-top:18px">Call: +234 800 000 0000 | Lagos, Nigeria</p>
+<p style="margin-top:18px">📞 08134207567 | 09153151551 | 🌐 www.Aiedu.Mart.Com</p>
 </section>
 
-<footer>© 2026 AIEDU Consulting Ltd. All Rights Reserved. Database | Data Analytics | AI Solutions</footer>
+<footer>
+<div class="footer-grid">
+<div>
+<h3 style="color:#fff;margin-bottom:12px">AIEDU Consulting Ltd</h3>
+<p style="color:#94a3b8;line-height:1.6">25, Ibrahim Gambari Crescent, Katampe Extension, Abuja<br>1 Alahaja Street, Idimogun, Ogijo, Shagamu, Ogun State</p>
+<p style="margin-top:12px">📧 info@aieduconsulting.com<br>🌐 www.Aiedu.Mart.Com</p>
+</div>
+<div>
+<h4 style="color:#fff">Contact</h4>
+<a href="tel:+2348134207567">08134207567</a>
+<a href="tel:+2349153151551">09153151551</a>
+<a href="https://wa.me/2349153151551">WhatsApp Chat</a>
+</div>
+<div>
+<h4 style="color:#fff">Follow Us</h4>
+<a href="#">YouTube: @AICONSULTINGLIMITED</a>
+<a href="#">Facebook: AiEdu BootCamp</a>
+<a href="https://wa.me/2349153151551">Join WhatsApp</a>
+</div>
+</div>
+<p style="text-align:center;margin-top:30px;border-top:1px solid #1e293b;padding-top:20px;color:#64748b">© 2026 AIEDU Consulting Ltd. All Rights Reserved. SOPs | AI | Training | eCommerce</p>
+</footer>
 </body>
 </html>
